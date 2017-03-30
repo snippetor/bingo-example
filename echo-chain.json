@@ -1,0 +1,40 @@
+{
+  "domains": [
+    "127.0.0.1"
+  ],
+  "node": [
+    {
+      "name": "eastwall",
+      "model": "eastwall",
+      "domain": 0,
+      "rpc-port": 9090
+    },
+    {
+      "name": "northwall",
+      "model": "northwall",
+      "domain": 0,
+      "rpc-port": 9091,
+      "rpc-to": [
+        "eastwall"
+      ]
+    },
+    {
+      "name": "southwall",
+      "model": "southwall",
+      "domain": 0,
+      "rpc-port": 9092,
+      "rpc-to": [
+        "northwall"
+      ]
+    },
+    {
+      "name": "westwall",
+      "model": "westwall",
+      "domain": 0,
+      "rpc-port": 9093,
+      "rpc-to": [
+        "southwall"
+      ]
+    }
+  ]
+}
